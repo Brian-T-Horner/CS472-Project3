@@ -3,4 +3,5 @@ project(Project3)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Project3 main.cpp)
+add_executable(Project3 main.cpp DataPipeline.cpp IF_ID.cpp
+               ID_EX.cpp EX_Mem.cpp  Mem_WB.cpp)
