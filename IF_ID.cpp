@@ -3,6 +3,11 @@
 // Author: Brian Horner
 // Edit History:
 // 4/27/2022 - Initial Version
+// 4/27/2022 - Initial Version
+// 4/27/2022 - Added instruction private member
+// 4/27/2022 - Added instruction get and set methods
+// 4/27/2022 - Changed methods that passed pointer to ID_EX object to const
+// reference
 
 // --- Standard Library Includes ---
 #include <iostream>
@@ -11,9 +16,9 @@
 
 // --- Constructor ---
 IF_ID::IF_ID() {} // Default Constructor
-IF_ID::IF_ID(IF_ID *referenceIF_ID) { // Copy Constructor
-    if (referenceIF_ID->IF_ID_getInstruction() != 0){
-            this->instruction = referenceIF_ID->IF_ID_getInstruction();
+IF_ID::IF_ID(IF_ID const &referenceIF_ID) { // Copy Constructor
+    if (referenceIF_ID.getInstruction() != 0){
+        setInstruction(referenceIF_ID.getInstruction());
     }else{
         std::cout << "No data to use for copy constructor. Set to default "
                      "value" <<std::endl;
@@ -22,14 +27,14 @@ IF_ID::IF_ID(IF_ID *referenceIF_ID) { // Copy Constructor
 }
 
 // --- Copy Data Method ---
-void IF_ID::copyDataToRead(IF_ID * referenceIF_ID) {
-    this->instruction = referenceIF_ID->IF_ID_getInstruction();
+IF_ID IF_ID::copyDataToRead(IF_ID  const &referenceIF_ID) {
+    setInstruction(referenceIF_ID.getInstruction());
 }
 
 // --- Get and Set Functions
-int IF_ID::IF_ID_getInstruction() const {return this->instruction;}
+int IF_ID::getInstruction() const {return this->instruction;}
 
-void IF_ID::IF_ID_setInstruction(int newInstruction){
+void IF_ID::setInstruction(int newInstruction){
     this->instruction = newInstruction;
 }
 

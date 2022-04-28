@@ -6,6 +6,8 @@
 // 4/27/2022 - Added instruction and control private members
 // 4/27/2022 - Added control get and set methods
 // 4/27/2022 - Added instruction get and set methods
+// 4/27/2022 - Changed methods that passed pointer to ID_EX object to const
+// reference
 
 #ifndef PROJECT3_ID_EX_H
 #define PROJECT3_ID_EX_H
@@ -19,10 +21,10 @@ class ID_EX {
 public:
     // --- Constructor ---
     ID_EX(); //default constructor
-    ID_EX(ID_EX*); // copy constructor
+    ID_EX(ID_EX const&); // copy constructor
 
     // --- General Methods ---
-    void copyDataToRead(ID_EX*);
+    ID_EX copyDataToRead(ID_EX const&);
     bool checkInstructionValues() const;
 
     // --- Instruction Get Methods ---

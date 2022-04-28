@@ -13,19 +13,32 @@
 
 // --- Constructor ---
 EX_Mem::EX_Mem() {}
+EX_Mem::EX_Mem(EX_Mem const &referenceEX_Mem) {
 
-// --- General Methods ---
-void EX_Mem::copyDataToRead(EX_Mem *referenceEX_Mem) {
     //Instruction Calculated Information
-    this->ALUResult = referenceEX_Mem->getALUResult();
-    this->SWValue = referenceEX_Mem->getSWValue();
-    this->WriteRegNum = referenceEX_Mem->getWriteRegNum();
+    setALUResult( referenceEX_Mem.getALUResult());
+    setSWValue(referenceEX_Mem.getSWValue());
+    setWriteRegNum(referenceEX_Mem.getWriteRegNum());
 
     // Control Bits
-    this->MemRead = referenceEX_Mem->getMemRead();
-    this->MemWrite = referenceEX_Mem->getMemWrite();
-    this->RegWrite = referenceEX_Mem->getRegWrite();
-    this->MemToReg = referenceEX_Mem->getMemToReg();
+    setMemRead(referenceEX_Mem.getMemRead());
+    setMemWrite(referenceEX_Mem.getMemWrite());
+    setRegWrite(referenceEX_Mem.getRegWrite());
+    setMemToReg(referenceEX_Mem.getMemToReg());
+}
+
+// --- General Methods ---
+void EX_Mem::copyDataToRead(EX_Mem const &referenceEX_Mem) {
+    //Instruction Calculated Information
+    setALUResult( referenceEX_Mem.getALUResult());
+    setSWValue(referenceEX_Mem.getSWValue());
+    setWriteRegNum(referenceEX_Mem.getWriteRegNum());
+
+    // Control Bits
+    setMemRead(referenceEX_Mem.getMemRead());
+    setMemWrite(referenceEX_Mem.getMemWrite());
+    setRegWrite(referenceEX_Mem.getRegWrite());
+    setMemToReg(referenceEX_Mem.getMemToReg());
 }
 
 // --- Instruction Get Methods ---
@@ -51,7 +64,19 @@ void EX_Mem::setRegWrite(bool newRegWrite) {RegWrite = newRegWrite;}
 void EX_Mem::setMemToReg(bool newMemToReg) {MemToReg = newMemToReg;}
 
 // --- Print Method ---
-void EX_Mem::print() const {}
+void EX_Mem::print() const {
+    std::cout << "Calculation Instruction Information:\n";
+    std::cout << "ALUResult: " <<std::uppercase<<std::hex <<ALUResult<<std::endl;
+    std::cout << "SWValue: " <<SWValue <<std::endl;
+    std::cout << "WriteRegNum: " <<std::dec <<WriteRegNum <<std::endl;
+
+    std::cout <<"\nControl Information:\n";
+    std::cout << "MemRead: " <<std::dec<<MemRead <<std::endl;
+    std::cout << "MemWrite: " << MemWrite <<std::endl;
+    std::cout << "RegWrite: " <<RegWrite <<std::endl;
+    std::cout << "MemToReg: " <<MemToReg <<std::endl;
+
+}
 
 // --- Destructor ---
 EX_Mem::~EX_Mem() {}

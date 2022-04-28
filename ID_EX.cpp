@@ -6,6 +6,8 @@
 // 4/27/2022 - Added control get and set methods
 // 4/27/2022 - Added destructor
 // 4/27/2022 - Added instruction get and set methods
+// 4/27/2022 - Changed methods that passed pointer to ID_EX object to const
+// reference
 
 // --- Standard Library Includes
 #include <iostream>
@@ -14,43 +16,45 @@
 
 // --- Constructor ---
 ID_EX::ID_EX() {}
-ID_EX::ID_EX(ID_EX *referenceID_EX) {
+
+ID_EX::ID_EX(ID_EX const &referenceID_EX) {
     if(checkInstructionValues()){
-        this->ReadReg1 = referenceID_EX->getReadReg1();
-        this-> ReadReg2= referenceID_EX->getReadReg2();
-        this-> Offset = referenceID_EX->getOffset();
-        this-> WriteReg_20_16 = referenceID_EX->getWriteReg_20_16();
-        this-> WriteReg_15_11 = referenceID_EX->getWriteReg_15_11();
-        this-> OpCode = referenceID_EX->getOpCode();
+        // Instruction Information
+        setReadReg1(referenceID_EX.getReadReg1());
+        setReadReg2(referenceID_EX.getReadReg2());
+        setOffset(referenceID_EX.getOffset());
+        setWriteReg_20_16(referenceID_EX.getWriteReg_20_16());
+        setWriteReg_15_11(referenceID_EX.getWriteReg_15_11());
+        setOpCode(referenceID_EX.getOpCode());
 
         // Control Bits
-        this-> RegDest = referenceID_EX->getRegDest();
-        this-> ALUOp = referenceID_EX->getALUOp();
-        this-> ALUSrc = referenceID_EX->getALUSrc();
-        this-> MemRead = referenceID_EX->getMemRead();
-        this-> MemWrite = referenceID_EX->getMemWrite();
-        this-> RegWrite = referenceID_EX->getRegWrite();
-        this-> MemToReg = referenceID_EX->getMemToReg();
+        setRegDest(referenceID_EX.getRegDest());
+        setALUOp(referenceID_EX.getALUOp());
+        setALUSrc(referenceID_EX.getALUSrc());
+        setMemRead(referenceID_EX.getMemRead());
+        setMemWrite(referenceID_EX.getMemWrite());
+        setRegWrite(referenceID_EX.getRegWrite());
+        setMemToReg(referenceID_EX.getMemToReg());
     }
 }
 // --- General Methods ---
-void ID_EX::copyDataToRead(ID_EX *writeID_EX){
+ID_EX ID_EX::copyDataToRead(ID_EX const &referenceID_EX){
     // Instruction Information
-    this->ReadReg1 = writeID_EX->getReadReg1();
-    this-> ReadReg2= writeID_EX->getReadReg2();
-    this-> Offset = writeID_EX->getOffset();
-    this-> WriteReg_20_16 = writeID_EX->getWriteReg_20_16();
-    this-> WriteReg_15_11 = writeID_EX->getWriteReg_15_11();
-    this-> OpCode = writeID_EX->getOpCode();
+    setReadReg1(referenceID_EX.getReadReg1());
+    setReadReg2(referenceID_EX.getReadReg2());
+    setOffset(referenceID_EX.getOffset());
+    setWriteReg_20_16(referenceID_EX.getWriteReg_20_16());
+    setWriteReg_15_11(referenceID_EX.getWriteReg_15_11());
+    setOpCode(referenceID_EX.getOpCode());
 
     // Control Bits
-    this-> RegDest = writeID_EX->getRegDest();
-    this-> ALUOp = writeID_EX->getALUOp();
-    this-> ALUSrc = writeID_EX->getALUSrc();
-    this-> MemRead = writeID_EX->getMemRead();
-    this-> MemWrite = writeID_EX->getMemWrite();
-    this-> RegWrite = writeID_EX->getRegWrite();
-    this-> MemToReg = writeID_EX->getMemToReg();
+    setRegDest(referenceID_EX.getRegDest());
+    setALUOp(referenceID_EX.getALUOp());
+    setALUSrc(referenceID_EX.getALUSrc());
+    setMemRead(referenceID_EX.getMemRead());
+    setMemWrite(referenceID_EX.getMemWrite());
+    setRegWrite(referenceID_EX.getRegWrite());
+    setMemToReg(referenceID_EX.getMemToReg());
 }
 
 
@@ -123,13 +127,13 @@ void ID_EX::print() const {
     // TODO:: FUNCTION???
 
     std::cout << "\nControl Information:\n";
-    std::cout << "RegDest" <<RegDest<<std::endl;
-    std::cout << "ALUOp"<<ALUOp<<std::endl;
-    std::cout << "ALUSrc"<<ALUSrc<<std::endl;
-    std::cout << "MemRead"<<MemRead<< std::endl;
-    std::cout <<"MemWrite"<<MemWrite<< std::endl;
-    std::cout << "RegWrite"<<RegWrite<<std::endl;
-    std::cout << "MemToReg"<<MemToReg<<std::endl;
+    std::cout << "RegDest: " <<RegDest<<std::endl;
+    std::cout << "ALUOp: "<<ALUOp<<std::endl;
+    std::cout << "ALUSrc: "<<ALUSrc<<std::endl;
+    std::cout << "MemRead: "<<MemRead<< std::endl;
+    std::cout <<"MemWrite: "<<MemWrite<< std::endl;
+    std::cout << "RegWrite: "<<RegWrite<<std::endl;
+    std::cout << "MemToReg: "<<MemToReg<<std::endl;
 
 }
 

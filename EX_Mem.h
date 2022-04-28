@@ -18,10 +18,10 @@ class EX_Mem {
 public:
     // --- Constructor ---
     EX_Mem(); // default constructor
-    EX_Mem(EX_Mem*); //copy constructor
+    EX_Mem(EX_Mem const&); //copy constructor
 
     // --- General Methods ---
-    void copyDataToRead(EX_Mem*);
+    void copyDataToRead(EX_Mem const&);
     bool checkInstructionValues() const; //TODO::
 
     // --- Instruction Calculations Get Methods ---
