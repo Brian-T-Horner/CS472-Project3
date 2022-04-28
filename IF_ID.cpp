@@ -32,11 +32,8 @@ IF_ID IF_ID::copyDataToRead(IF_ID  const &referenceIF_ID) {
 }
 
 // --- Get and Set Functions
-int IF_ID::getInstruction() const {return this->instruction;}
-
-void IF_ID::setInstruction(int newInstruction){
-    this->instruction = newInstruction;
-}
+int64_t IF_ID::getInstruction() const {return instruction;}
+void IF_ID::setInstruction(int64_t newInstruction){instruction = newInstruction;}
 
 // --- Print Method ---
 void IF_ID::print() const {

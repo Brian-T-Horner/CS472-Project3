@@ -3,6 +3,9 @@
 // Author: Brian Horner
 // Edit History:
 // 4/27/2022 - Initial Version
+// 4/27/2022 - Added data members
+// 4/27/2022 - Added constructor, destructor and general methods
+// 4/27/2022 - Added get and set methods
 
 #ifndef PROJECT3_MEM_WB_H
 #define PROJECT3_MEM_WB_H
@@ -19,7 +22,7 @@ public:
 
     // --- General Methods ---
     void copyDataToRead(Mem_WB const&);
-    bool checkInstructionValues() const;
+    bool checkInstructionValues() const; //TODO::
 
     // --- Instruction Calculations Get Methods ---
     int getLWDataValue() const;
@@ -58,4 +61,4 @@ private:
 };
 
 
-#endif //PROJECT3_MEM_WB_H
+#endif

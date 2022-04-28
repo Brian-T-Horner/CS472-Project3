@@ -14,7 +14,7 @@ public:
     DataPipeline();
 
     // --- General Pipeline Functions
-    void IF_stage(int []);
+    void IF_stage(int64_t);
     void ID_stage();
     void EX_stage();
     void MEM_stage();
@@ -23,14 +23,17 @@ public:
     void copy_write_to_read();
 
     // --- Get Methods ---
-    int getProgramCounter();
+    int getClockCycle();
 
     // --- Set Methods ---
-    void setProgramCounter(int);
+    void setClockCycle(int);
+
+    // Clock Cycle Adder
+    void addToClockCycle(int);
 
     // --- Destructor ---
     ~DataPipeline();
 private:
-    int programCounter{0};
+    int ClockCycle{0};
 };
-#endif DATAPIPELINE_H
+#endif

@@ -21,8 +21,8 @@ public:
     IF_ID copyDataToRead(IF_ID const&);
 
     // --- Get and Set Methods ---
-    void setInstruction(int);
-    int getInstruction() const;
+    void setInstruction(int64_t);
+    int64_t getInstruction() const;
 
     // --- Print Method ---
     void print() const;
@@ -30,9 +30,9 @@ public:
     //--- Destructor ---
     ~IF_ID();
 private:
-    int instruction{0};
+    int64_t instruction{0};
 
 };
 
 
-#endif //PROJECT3_IF_ID_H
+#endif
