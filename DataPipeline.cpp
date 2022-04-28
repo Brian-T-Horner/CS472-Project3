@@ -7,6 +7,7 @@
 // 4/27/2022 - Added Constructor and destructor
 // 4/27/2022 - Added general declarations (mainMem, Registers etc.)
 // 4/27/2022 - Fixed print function
+// 4/27/2022 - IF_Stage done
 
 // --- Standard Library Includes ---
 #include <iostream>
@@ -61,15 +62,14 @@ DataPipeline::DataPipeline() {
     populateRegisters(registers, numOfRegisters);
 }
 
-// --- General Pipeline Functions ---
+// --- General Pipeline Functions --- // TODO:: Mst to be done
 void DataPipeline::IF_stage(int64_t newinstruction) {
     addToClockCycle(1);
+    IF_ID_Write.setInstruction(newinstruction);
 }
 void DataPipeline::ID_stage() {}
 void DataPipeline::EX_stage() {}
-
 void DataPipeline::MEM_stage() {}
-
 void DataPipeline::WB_stage() {}
 
 void DataPipeline::print_out_everything() {
