@@ -8,6 +8,8 @@
 
 // --- Standard Library Includes ---
 #include <iostream>
+#include <bitset>
+
 
 // --- User Built Includes ---
 #include "DataPipeline.h"
@@ -17,6 +19,8 @@ void populateMainMem(short *, short);
 void populateRegisters(int *, short);
 void runSimulation(const int64_t *, int);
 
+
+
 int main() {
     const int instructionCacheSize = 12;
     int64_t instructionCache[instructionCacheSize] = {0xa1020000, 0x810AFFFC,
@@ -25,6 +29,7 @@ int main() {
                                                       0x81510010, 0x00624022,
                                                       0x00000000,0x00000000,
                                                       0x00000000, 0x00000000};
+
 
     runSimulation(instructionCache, instructionCacheSize);
     return 0;
@@ -47,3 +52,4 @@ void runSimulation(const int64_t *instructionArr, int numInstructions){
 
     }
 }
+

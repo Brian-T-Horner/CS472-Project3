@@ -8,6 +8,7 @@
 // 4/27/2022 - Added instruction get and set methods
 // 4/27/2022 - Changed methods that passed pointer to ID_EX object to const
 // reference
+// 4/28/2022 - Added function code get/set methods & data member
 
 #ifndef PROJECT3_ID_EX_H
 #define PROJECT3_ID_EX_H
@@ -42,6 +43,7 @@ public:
     void setWriteReg_20_16(int);
     void setWriteReg_15_11(int);
     void setOpCode(int);
+    void setFunction(int);
 
     // --- Control Bits Get Methods ---
     bool getRegDest() const;
@@ -51,6 +53,8 @@ public:
     bool getMemWrite() const;
     bool getRegWrite() const;
     bool getMemToReg() const;
+    int getFunction() const;
+
 
     // --- Control Bits Set Methods ---
     void setRegDest(bool);
@@ -60,6 +64,7 @@ public:
     void setMemWrite(bool);
     void setRegWrite(bool);
     void setMemToReg(bool);
+
 
     // --- Print Method ---
     void print() const;

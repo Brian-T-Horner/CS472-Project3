@@ -8,6 +8,7 @@
 // 4/27/2022 - Added instruction get and set methods
 // 4/27/2022 - Changed methods that passed pointer to ID_EX object to const
 // reference
+// 4/28/2022 - Added function code get/set methods and amended copies
 
 // --- Standard Library Includes
 #include <iostream>
@@ -26,6 +27,7 @@ ID_EX::ID_EX(ID_EX const &referenceID_EX) {
         setWriteReg_20_16(referenceID_EX.getWriteReg_20_16());
         setWriteReg_15_11(referenceID_EX.getWriteReg_15_11());
         setOpCode(referenceID_EX.getOpCode());
+        setFunction(referenceID_EX.getFunction());
 
         // Control Bits
         setRegDest(referenceID_EX.getRegDest());
@@ -46,6 +48,7 @@ ID_EX ID_EX::copyDataToRead(ID_EX const &referenceID_EX){
     setWriteReg_20_16(referenceID_EX.getWriteReg_20_16());
     setWriteReg_15_11(referenceID_EX.getWriteReg_15_11());
     setOpCode(referenceID_EX.getOpCode());
+    setFunction(referenceID_EX.getFunction());
 
     // Control Bits
     setRegDest(referenceID_EX.getRegDest());
@@ -76,44 +79,46 @@ bool ID_EX::checkInstructionValues() const {
 }
 
 // --- Instruction Get Methods ---
-int ID_EX::getReadReg1() const {return this-> ReadReg1;}
-int ID_EX::getReadReg2() const {return this-> ReadReg2;}
-int ID_EX::getOffset() const {return this-> Offset;}
-int ID_EX::getWriteReg_20_16() const {return this-> WriteReg_20_16;}
-int ID_EX::getWriteReg_15_11() const {return this-> WriteReg_15_11;}
-int ID_EX::getOpCode() const {return this-> OpCode;}
+int ID_EX::getReadReg1() const {return ReadReg1;}
+int ID_EX::getReadReg2() const {return ReadReg2;}
+int ID_EX::getOffset() const {return Offset;}
+int ID_EX::getWriteReg_20_16() const {return WriteReg_20_16;}
+int ID_EX::getWriteReg_15_11() const {return WriteReg_15_11;}
+int ID_EX::getOpCode() const {return OpCode;}
+int ID_EX::getFunction() const {return Function;}
 
 // --- Instruction Set Methods ---
-void ID_EX::setReadReg1(int newReadReg1) {this->ReadReg1 = newReadReg1;}
-void ID_EX::setReadReg2(int newReadReg2) {this->ReadReg2 = newReadReg2;}
-void ID_EX::setOffset(int newOffset) {this->Offset = newOffset;}
+void ID_EX::setReadReg1(int newReadReg1) {ReadReg1 = newReadReg1;}
+void ID_EX::setReadReg2(int newReadReg2) {ReadReg2 = newReadReg2;}
+void ID_EX::setOffset(int newOffset) {Offset = newOffset;}
 
 void ID_EX::setWriteReg_20_16(int newWriteReg_20_16) {
-    this->WriteReg_20_16 = newWriteReg_20_16;
+    WriteReg_20_16 = newWriteReg_20_16;
 }
 void ID_EX::setWriteReg_15_11(int newWriteReg_15_11) {
-    this->WriteReg_15_11 = newWriteReg_15_11;
+    WriteReg_15_11 = newWriteReg_15_11;
 }
 
-void ID_EX::setOpCode(int newOpCode) {this->OpCode = newOpCode;}
+void ID_EX::setOpCode(int newOpCode) {OpCode = newOpCode;}
+void ID_EX::setFunction(int newFunction) {Function = newFunction;}
 
 // --- Control Bits Get Methods --
-bool ID_EX::getRegDest() const {return this->RegDest;}
-bool ID_EX::getALUOp() const {return this->ALUOp;}
-bool ID_EX::getALUSrc() const {return this->ALUSrc;}
-bool ID_EX::getMemRead() const {return this->MemRead;}
-bool ID_EX::getMemWrite() const {return this-> MemWrite;}
-bool ID_EX::getRegWrite() const {return this->RegWrite;}
-bool ID_EX::getMemToReg() const {return this->MemToReg;}
+bool ID_EX::getRegDest() const {return RegDest;}
+bool ID_EX::getALUOp() const {return ALUOp;}
+bool ID_EX::getALUSrc() const {return ALUSrc;}
+bool ID_EX::getMemRead() const {return MemRead;}
+bool ID_EX::getMemWrite() const {return MemWrite;}
+bool ID_EX::getRegWrite() const {return RegWrite;}
+bool ID_EX::getMemToReg() const {return MemToReg;}
 
 // --- Control Bits Set Methods ---
-void ID_EX::setRegDest(bool newRegDest) {this->RegDest = newRegDest;}
-void ID_EX::setALUOp(bool newALUOp) {this->ALUOp = newALUOp;}
-void ID_EX::setALUSrc(bool newALUSrc) {this->ALUSrc = newALUSrc;}
-void ID_EX::setMemRead(bool newMemRead) {this->MemRead = newMemRead;}
-void ID_EX::setMemWrite(bool newMemWrite) {this->MemWrite = newMemWrite;}
-void ID_EX::setRegWrite(bool newRegWrite) {this->RegWrite = newRegWrite;}
-void ID_EX::setMemToReg(bool newMemToReg) {this->MemToReg = newMemToReg;}
+void ID_EX::setRegDest(bool newRegDest) {RegDest = newRegDest;}
+void ID_EX::setALUOp(bool newALUOp) {ALUOp = newALUOp;}
+void ID_EX::setALUSrc(bool newALUSrc) {ALUSrc = newALUSrc;}
+void ID_EX::setMemRead(bool newMemRead) {MemRead = newMemRead;}
+void ID_EX::setMemWrite(bool newMemWrite) {MemWrite = newMemWrite;}
+void ID_EX::setRegWrite(bool newRegWrite) {RegWrite = newRegWrite;}
+void ID_EX::setMemToReg(bool newMemToReg) {MemToReg = newMemToReg;}
 
 // Print Method ---
 void ID_EX::print() const {
