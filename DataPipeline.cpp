@@ -135,8 +135,42 @@ void DataPipeline::ID_stage() {
 
 
 
-void DataPipeline::EX_stage() {}
-void DataPipeline::MEM_stage() {}
+void DataPipeline::EX_stage() {
+
+    EX_Mem_Write.setMemRead(ID_EX_Read.getMemRead());
+    EX_Mem_Write.setMemWrite(ID_EX_Read.getMemWrite());
+    EX_Mem_Write.setRegWrite(ID_EX_Read.getRegWrite());
+    EX_Mem_Write.setMemToReg(ID_EX_Read.getMemToReg());
+
+    if (){
+        // R type
+
+    }else if(){
+        // load byte
+    }else if(){
+        // store byte
+    }else{
+        // Nop
+        EX_Mem_Write.setALUResult(0);
+        EX_Mem_Write.setSWValue(0);
+        EX_Mem_Write.setWriteRegNum(0);
+    }
+
+}
+void DataPipeline::MEM_stage() {
+
+    Mem_WB_Write.setMemToReg(EX_Mem_Read.getMemToReg());
+    Mem_WB_Write.setRegWrite(EX_Mem_Read.getRegWrite());
+
+    if (EX_Mem_Write.getMemRead() == 0 && EX_Mem_Write.getMemWrite() == 0){
+        // R type
+
+    }else if(EX_Mem_Write.getMemRead() == 1 && EX_Mem_Write.getMemWrite() == 0){
+        // load byte
+    }else if(EX_Mem_Write.getMemRead() == 0 && EX_Mem_Write.getMemWrite() == 1){
+        // store byte
+    }else{
+}
 void DataPipeline::WB_stage() {}
 
 void DataPipeline::print_out_everything() {
