@@ -10,6 +10,8 @@
 // 4/27/2022 - IF_Stage done
 // 4/28/2022 - Added bitwise & and shift functions
 // 4/28/2022 - ID_Stage done
+// 4/29/2022 - EX_Stage done
+// 4/30/2022 -
 
 // --- Standard Library Includes ---
 #include <iostream>
@@ -26,6 +28,7 @@
 // --- Declarations ---
 
 
+#define X 00;
 
 // Write Objects
 IF_ID IF_ID_Write;
@@ -60,9 +63,10 @@ void populateRegisters(int *, short);
 void initializeReadWriteObject();
 int CalcOpCode(int64_t);
 int CalcOffset(int64_t);
-int CalcReadReg1(int64_t);
-int CalcReadReg2(int64_t);
+int CalcReadReg1(int64_t, int []);
+int CalcReadReg2(int64_t, int []);
 int CalcWriteReg_15_11(int64_t);
+int CalcWriteReg_20_16(int64_t);
 int CalcFunction(int64_t);
 
 
@@ -89,9 +93,9 @@ void DataPipeline::ID_stage() {
         // Calc Offset and set
         ID_EX_Write.setOffset(CalcOffset(newInstruction));
         // Calc read register 1 and set
-        ID_EX_Write.setReadReg1(CalcReadReg1(newInstruction));
+        ID_EX_Write.setReadReg1(CalcReadReg1(newInstruction, registers));
         // Calc read register 2 and set
-        ID_EX_Write.setReadReg2(CalcReadReg2(newInstruction));
+        ID_EX_Write.setReadReg2(CalcReadReg2(newInstruction, registers));
         // Calc write register bits 15-11 and set
         ID_EX_Write.setWriteReg_15_11(CalcWriteReg_15_11(newInstruction));
         // Set write register bits 20-16 from read register 2
@@ -142,18 +146,53 @@ void DataPipeline::EX_stage() {
     EX_Mem_Write.setRegWrite(ID_EX_Read.getRegWrite());
     EX_Mem_Write.setMemToReg(ID_EX_Read.getMemToReg());
 
-    if (){
+    if (ID_EX_Read.getRegDest() == 1 && ID_EX_Read.getALUOp() == 1 &&ID_EX_Read.getALUSrc() == 0){
         // R type
+        if(ID_EX_Read.getFunction() == 0x20){
+            //add
+            EX_Mem_Write.setALUResult(ID_EX_Read.getReadReg1() + ID_EX_Read.getReadReg2());
+        }else if(ID_EX_Read.getFunction() == 0x22){
+            //sub
+            EX_Mem_Write.setALUResult(ID_EX_Read.getReadReg1()-ID_EX_Read.getReadReg2());
+        }else{
+            std::cout << "Error: Should not reach here in R type function "
+                         "execution."<<std::endl;
+        }
 
-    }else if(){
-        // load byte
-    }else if(){
-        // store byte
+        // set WriteRegNum
+        EX_Mem_Write.setWriteRegNum(ID_EX_Read.getWriteReg_15_11());
+        // set SWValue
+        EX_Mem_Write.setSWValue(ID_EX_Read.getReadReg2());
+
+    }else if(ID_EX_Read.getRegDest() == 0 && ID_EX_Read.getALUOp() == 0 &&
+    ID_EX_Read.getALUSrc() == 1){
+        if(ID_EX_Read.getOpCode() == 0x20){
+            // load byte
+
+            // Set ALU Result
+            EX_Mem_Write.setALUResult(ID_EX_Read.getReadReg1() + ID_EX_Read
+            .getOffset());
+            // Set WriteReg
+            EX_Mem_Write.setWriteRegNum(ID_EX_Read.getWriteReg_20_16());
+            // Set swvalue
+            EX_Mem_Write.setSWValue(ID_EX_Read.getReadReg2());
+
+        }else if(ID_EX_Read.getOpCode() == 0x28){
+            // store byte
+            EX_Mem_Write.setALUResult(ID_EX_Read.getReadReg1() + ID_EX_Read
+            .getOffset());
+            // WriteRegNum & SWValue not used
+        }else{
+            std::cout << "Error: Should not reach here in I type opcode "
+                         "execution." <<std::endl;
+        }
     }else{
         // Nop
+
         EX_Mem_Write.setALUResult(0);
         EX_Mem_Write.setSWValue(0);
         EX_Mem_Write.setWriteRegNum(0);
+
     }
 
 }
@@ -170,6 +209,7 @@ void DataPipeline::MEM_stage() {
     }else if(EX_Mem_Write.getMemRead() == 0 && EX_Mem_Write.getMemWrite() == 1){
         // store byte
     }else{
+    }
 }
 void DataPipeline::WB_stage() {}
 
@@ -309,18 +349,26 @@ int CalcOffset(int64_t instruction){
     return static_cast<int>(offset);
 }
 
-int CalcReadReg1(int64_t instruction){
-    // Calculates Read Register 1
+int CalcReadReg1(int64_t instruction, int registers []){
+    // Calculates Read Register 1 Value
     int mask = 0b11111;
     int reg = ((mask<<21)&instruction)>>21;
-    return reg;
+    int regValue = registers[reg];
+    return regValue;
 }
-int CalcReadReg2(int64_t instruction){
-    // Calculates Read Register 2
+int CalcReadReg2(int64_t instruction, int registers []){
+    // Calculates Read Register 2 Value
     int mask = 0b11111;
     int reg = ((mask<<16)&instruction)>>16;
-    return reg;
+    int regValue = registers[reg];
+    return regValue;
 }
+int CalcWriteReg_20_16(int64_t instruction){
+        int mask = 0b11111;
+        int reg = ((mask<<16)&instruction)>>16;
+        return reg;
+    }
+
 int CalcWriteReg_15_11(int64_t instruction){
     // Calculates Write Register bits 15-11
     int mask = 0b11111;
@@ -328,7 +376,7 @@ int CalcWriteReg_15_11(int64_t instruction){
     return reg;
 }
 
-int CalcFunction(int64_t instruction){
+int CalcFunction(int64_t instruction, int registers){
     // Calculates function code
     int mask = 0b111111;
     int func = (mask&instruction);
