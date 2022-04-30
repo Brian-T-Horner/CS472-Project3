@@ -66,5 +66,5 @@ private:
 
 };
 
-
+// You read or wrote to Main Mem in a stage other than MEM.  You read from Main Mem in the WB stage.
 #endif

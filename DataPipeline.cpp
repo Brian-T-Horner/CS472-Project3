@@ -11,12 +11,11 @@
 // 4/28/2022 - Added bitwise & and shift functions
 // 4/28/2022 - ID_Stage done
 // 4/29/2022 - EX_Stage done
-// 4/30/2022 -
+// 4/30/2022 - Mem_Stage and WB_Stage done
 
 // --- Standard Library Includes ---
 #include <iostream>
 #include <cstdint>
-#include <bitset>
 
 // --- User Build Includes ---
 #include "DataPipeline.h"
@@ -28,7 +27,7 @@
 // --- Declarations ---
 
 
-#define X 00;
+
 
 // Write Objects
 IF_ID IF_ID_Write;
@@ -60,7 +59,6 @@ int registers[numOfRegisters];
 // --- General Functions ---
 void populateMainMem(short *, short);
 void populateRegisters(int *, short);
-void initializeReadWriteObject();
 int CalcOpCode(int64_t);
 int CalcOffset(int64_t);
 int CalcReadReg1(int64_t, int []);
@@ -99,7 +97,7 @@ void DataPipeline::ID_stage() {
         // Calc write register bits 15-11 and set
         ID_EX_Write.setWriteReg_15_11(CalcWriteReg_15_11(newInstruction));
         // Set write register bits 20-16 from read register 2
-        ID_EX_Write.setWriteReg_20_16(ID_EX_Write.getReadReg2());
+        ID_EX_Write.setWriteReg_20_16(CalcWriteReg_20_16(newInstruction));
         // Calculate function code and set
         ID_EX_Write.setFunction(CalcFunction(newInstruction));
 
@@ -201,17 +199,53 @@ void DataPipeline::MEM_stage() {
     Mem_WB_Write.setMemToReg(EX_Mem_Read.getMemToReg());
     Mem_WB_Write.setRegWrite(EX_Mem_Read.getRegWrite());
 
-    if (EX_Mem_Write.getMemRead() == 0 && EX_Mem_Write.getMemWrite() == 0){
-        // R type
 
-    }else if(EX_Mem_Write.getMemRead() == 1 && EX_Mem_Write.getMemWrite() == 0){
+    if (EX_Mem_Read.getMemRead() == 0 && EX_Mem_Read.getMemWrite() == 0){
+        // R type
+        Mem_WB_Write.setLWDataValue(00); // setting to 00 as NULL value
+        Mem_WB_Write.setALUResult(EX_Mem_Read.getALUResult());
+        Mem_WB_Write.setWriteRegNum((EX_Mem_Read.getWriteRegNum()));
+
+    }else if(EX_Mem_Read.getMemRead() == 1 && EX_Mem_Read.getMemWrite() == 0){
         // load byte
-    }else if(EX_Mem_Write.getMemRead() == 0 && EX_Mem_Write.getMemWrite() == 1){
+
+        // Getting write reg number for loading later
+        Mem_WB_Write.setWriteRegNum((EX_Mem_Read.getWriteRegNum()));
+        // Getting alu result
+        Mem_WB_Write.setALUResult(EX_Mem_Read.getALUResult());
+        // setting load word data value
+        Mem_WB_Write.setLWDataValue(main_Mem[Mem_WB_Write.getALUResult()]);
+
+
+
+    }else if(EX_Mem_Read.getMemRead() == 0 && EX_Mem_Read.getMemWrite() == 1){
         // store byte
+
+        // Getting ALUResult
+        Mem_WB_Write.setALUResult(EX_Mem_Read.getALUResult());
+        // storing SWValue into main memory with alu result location
+        main_Mem[Mem_WB_Write.getALUResult()] = EX_Mem_Read.getSWValue();
+        Mem_WB_Write.setALUResult(00); // setting to 00 as NULL value
+        Mem_WB_Write.setWriteRegNum(00); // setting to 00 as NULL value
     }else{
+        //nop
+        Mem_WB_Write.setLWDataValue(0);
+        Mem_WB_Write.setALUResult(0);
+        Mem_WB_Write.setWriteRegNum(0);
     }
 }
-void DataPipeline::WB_stage() {}
+void DataPipeline::WB_stage() {
+    if(Mem_WB_Read.getRegWrite() == 1 && Mem_WB_Read.getRegWrite() == 0){
+        // R type
+        // Storing alu result into registers with reg num as index
+        registers[Mem_WB_Read.getWriteRegNum()] = Mem_WB_Read.getALUResult();
+    }else if (Mem_WB_Read.getRegWrite() == 1 && Mem_WB_Read.getRegWrite() == 1){
+        // load byte
+        // Storing loading byte into registers with reg num as index
+        registers[Mem_WB_Read.getWriteRegNum()] = Mem_WB_Read.getLWDataValue();
+    }
+    // Load word is already done at this point
+}
 
 void DataPipeline::print_out_everything() {
     std::cout << "\n\nCurrent Print out for Clock Cycle: " <<ClockCycle <<
