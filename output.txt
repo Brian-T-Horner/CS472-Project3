@@ -1,0 +1,1524 @@
+"C:\Users\bhorn\Desktop\Programming Stuff\C++ Projects\CS472\Project3\cmake-build-debug\Project3.exe"
+No data to use for copy constructor. Set to default value
+
+
+Current Print out for Clock Cycle: 1
+
+Current Register Values:
+Register: 0 Value: 0x0
+Register: 1 Value: 0x101
+Register: 2 Value: 0x102
+Register: 3 Value: 0x103
+Register: 4 Value: 0x104
+Register: 5 Value: 0x105
+Register: 6 Value: 0x106
+Register: 7 Value: 0x107
+Register: 8 Value: 0x108
+Register: 9 Value: 0x109
+Register: A Value: 0x10A
+Register: B Value: 0x10B
+Register: C Value: 0x10C
+Register: D Value: 0x10D
+Register: E Value: 0x10E
+Register: F Value: 0x10F
+Register: 10 Value: 0x110
+Register: 11 Value: 0x111
+Register: 12 Value: 0x112
+Register: 13 Value: 0x113
+Register: 14 Value: 0x114
+Register: 15 Value: 0x115
+Register: 16 Value: 0x116
+Register: 17 Value: 0x117
+Register: 18 Value: 0x118
+Register: 19 Value: 0x119
+Register: 1A Value: 0x11A
+Register: 1B Value: 0x11B
+Register: 1C Value: 0x11C
+Register: 1D Value: 0x11D
+Register: 1E Value: 0x11E
+Register: 1F Value: 0x11F
+------------------------------------------------------
+IF_ID Write:
+Instruction: 0xA1020000
+------------------------------------------------------
+IF_ID Read:
+Instruction: 0x00000000
+------------------------------------------------------
+ID_EX Write:
+Instruction Information:
+Read Register 1: 0
+Read Register 2: 0
+Offset: 0x0
+Write Register Bits 20-16: 0
+Write Register Bits 15-11: 0
+Opcode: 0
+Function: 0
+
+Control Information:
+RegDest: 0
+ALUOp: 0
+ALUSrc: 0
+MemRead: 0
+MemWrite: 0
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+ID_EX Read:
+Instruction Information:
+Read Register 1: 0
+Read Register 2: 0
+Offset: 0x0
+Write Register Bits 20-16: 0
+Write Register Bits 15-11: 0
+Opcode: 0
+Function: 0
+
+Control Information:
+RegDest: 0
+ALUOp: 0
+ALUSrc: 0
+MemRead: 0
+MemWrite: 0
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+EX_Mem Write:
+Calculation Instruction Information:
+ALUResult: 0
+SWValue: 0
+WriteRegNum: 0
+
+Control Information:
+MemRead: 0
+MemWrite: 0
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+EX_Mem Read:
+Calculation Instruction Information:
+ALUResult: 0
+SWValue: 0
+WriteRegNum: 0
+
+Control Information:
+MemRead: 0
+MemWrite: 0
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+Mem_WB Write:
+Calculation Instruction Information:
+ALUResult: 0
+LWDataValue: 0
+WriteRegNum: 0
+
+Control Information:
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+Mem_WB Read:
+Calculation Instruction Information:
+ALUResult: 0
+LWDataValue: 0
+WriteRegNum: 0
+
+Control Information:
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+0
+
+
+Current Print out for Clock Cycle: 2
+
+Current Register Values:
+Register: 0 Value: 0x0
+Register: 1 Value: 0x101
+Register: 2 Value: 0x102
+Register: 3 Value: 0x103
+Register: 4 Value: 0x104
+Register: 5 Value: 0x105
+Register: 6 Value: 0x106
+Register: 7 Value: 0x107
+Register: 8 Value: 0x108
+Register: 9 Value: 0x109
+Register: A Value: 0x10A
+Register: B Value: 0x10B
+Register: C Value: 0x10C
+Register: D Value: 0x10D
+Register: E Value: 0x10E
+Register: F Value: 0x10F
+Register: 10 Value: 0x110
+Register: 11 Value: 0x111
+Register: 12 Value: 0x112
+Register: 13 Value: 0x113
+Register: 14 Value: 0x114
+Register: 15 Value: 0x115
+Register: 16 Value: 0x116
+Register: 17 Value: 0x117
+Register: 18 Value: 0x118
+Register: 19 Value: 0x119
+Register: 1A Value: 0x11A
+Register: 1B Value: 0x11B
+Register: 1C Value: 0x11C
+Register: 1D Value: 0x11D
+Register: 1E Value: 0x11E
+Register: 1F Value: 0x11F
+------------------------------------------------------
+IF_ID Write:
+Instruction: 0x810AFFFC
+------------------------------------------------------
+IF_ID Read:
+Instruction: 0xA1020000
+------------------------------------------------------
+ID_EX Write:
+Instruction Information:
+Read Register 1: 108
+Read Register 2: 102
+Offset: 0x0
+Write Register Bits 20-16: 2
+Write Register Bits 15-11: 0
+Opcode: 40
+Function: 0
+
+Control Information:
+RegDest: 0
+ALUOp: 0
+ALUSrc: 1
+MemRead: 0
+MemWrite: 1
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+ID_EX Read:
+Instruction Information:
+Read Register 1: 0
+Read Register 2: 0
+Offset: 0x0
+Write Register Bits 20-16: 0
+Write Register Bits 15-11: 0
+Opcode: 0
+Function: 0
+
+Control Information:
+RegDest: 0
+ALUOp: 0
+ALUSrc: 0
+MemRead: 0
+MemWrite: 0
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+EX_Mem Write:
+Calculation Instruction Information:
+ALUResult: 0
+SWValue: 0
+WriteRegNum: 0
+
+Control Information:
+MemRead: 0
+MemWrite: 0
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+EX_Mem Read:
+Calculation Instruction Information:
+ALUResult: 0
+SWValue: 0
+WriteRegNum: 0
+
+Control Information:
+MemRead: 0
+MemWrite: 0
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+Mem_WB Write:
+Calculation Instruction Information:
+ALUResult: 0
+LWDataValue: 0
+WriteRegNum: 0
+
+Control Information:
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+Mem_WB Read:
+Calculation Instruction Information:
+ALUResult: 0
+LWDataValue: 0
+WriteRegNum: 0
+
+Control Information:
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+60
+
+
+Current Print out for Clock Cycle: 3
+
+Current Register Values:
+Register: 0 Value: 0x0
+Register: 1 Value: 0x101
+Register: 2 Value: 0x102
+Register: 3 Value: 0x103
+Register: 4 Value: 0x104
+Register: 5 Value: 0x105
+Register: 6 Value: 0x106
+Register: 7 Value: 0x107
+Register: 8 Value: 0x108
+Register: 9 Value: 0x109
+Register: A Value: 0x10A
+Register: B Value: 0x10B
+Register: C Value: 0x10C
+Register: D Value: 0x10D
+Register: E Value: 0x10E
+Register: F Value: 0x10F
+Register: 10 Value: 0x110
+Register: 11 Value: 0x111
+Register: 12 Value: 0x112
+Register: 13 Value: 0x113
+Register: 14 Value: 0x114
+Register: 15 Value: 0x115
+Register: 16 Value: 0x116
+Register: 17 Value: 0x117
+Register: 18 Value: 0x118
+Register: 19 Value: 0x119
+Register: 1A Value: 0x11A
+Register: 1B Value: 0x11B
+Register: 1C Value: 0x11C
+Register: 1D Value: 0x11D
+Register: 1E Value: 0x11E
+Register: 1F Value: 0x11F
+------------------------------------------------------
+IF_ID Write:
+Instruction: 0x00831820
+------------------------------------------------------
+IF_ID Read:
+Instruction: 0x810AFFFC
+------------------------------------------------------
+ID_EX Write:
+Instruction Information:
+Read Register 1: 108
+Read Register 2: 10A
+Offset: 0xFFFFFFFC
+Write Register Bits 20-16: 10
+Write Register Bits 15-11: 31
+Opcode: 32
+Function: 3C
+
+Control Information:
+RegDest: 0
+ALUOp: 0
+ALUSrc: 1
+MemRead: 1
+MemWrite: 0
+RegWrite: 1
+MemToReg: 1
+------------------------------------------------------
+ID_EX Read:
+Instruction Information:
+Read Register 1: 108
+Read Register 2: 102
+Offset: 0x0
+Write Register Bits 20-16: 2
+Write Register Bits 15-11: 0
+Opcode: 40
+Function: 0
+
+Control Information:
+RegDest: 0
+ALUOp: 0
+ALUSrc: 1
+MemRead: 0
+MemWrite: 1
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+EX_Mem Write:
+Calculation Instruction Information:
+ALUResult: 108
+SWValue: 0
+WriteRegNum: 0
+
+Control Information:
+MemRead: 0
+MemWrite: 1
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+EX_Mem Read:
+Calculation Instruction Information:
+ALUResult: 0
+SWValue: 0
+WriteRegNum: 0
+
+Control Information:
+MemRead: 0
+MemWrite: 0
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+Mem_WB Write:
+Calculation Instruction Information:
+ALUResult: 0
+LWDataValue: 0
+WriteRegNum: 0
+
+Control Information:
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+Mem_WB Read:
+Calculation Instruction Information:
+ALUResult: 0
+LWDataValue: 0
+WriteRegNum: 0
+
+Control Information:
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+32
+
+
+Current Print out for Clock Cycle: 4
+
+Current Register Values:
+Register: 0 Value: 0x0
+Register: 1 Value: 0x101
+Register: 2 Value: 0x102
+Register: 3 Value: 0x103
+Register: 4 Value: 0x104
+Register: 5 Value: 0x105
+Register: 6 Value: 0x106
+Register: 7 Value: 0x107
+Register: 8 Value: 0x108
+Register: 9 Value: 0x109
+Register: A Value: 0x10A
+Register: B Value: 0x10B
+Register: C Value: 0x10C
+Register: D Value: 0x10D
+Register: E Value: 0x10E
+Register: F Value: 0x10F
+Register: 10 Value: 0x110
+Register: 11 Value: 0x111
+Register: 12 Value: 0x112
+Register: 13 Value: 0x113
+Register: 14 Value: 0x114
+Register: 15 Value: 0x115
+Register: 16 Value: 0x116
+Register: 17 Value: 0x117
+Register: 18 Value: 0x118
+Register: 19 Value: 0x119
+Register: 1A Value: 0x11A
+Register: 1B Value: 0x11B
+Register: 1C Value: 0x11C
+Register: 1D Value: 0x11D
+Register: 1E Value: 0x11E
+Register: 1F Value: 0x11F
+------------------------------------------------------
+IF_ID Write:
+Instruction: 0x01263820
+------------------------------------------------------
+IF_ID Read:
+Instruction: 0x00831820
+------------------------------------------------------
+ID_EX Write:
+Instruction Information:
+Read Register 1: 104
+Read Register 2: 103
+Offset: 0x1820
+Write Register Bits 20-16: 3
+Write Register Bits 15-11: 3
+Opcode: 0
+Function: 20
+
+Control Information:
+RegDest: 1
+ALUOp: 1
+ALUSrc: 0
+MemRead: 0
+MemWrite: 0
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+ID_EX Read:
+Instruction Information:
+Read Register 1: 108
+Read Register 2: 10A
+Offset: 0xFFFFFFFC
+Write Register Bits 20-16: 10
+Write Register Bits 15-11: 31
+Opcode: 32
+Function: 3C
+
+Control Information:
+RegDest: 0
+ALUOp: 0
+ALUSrc: 1
+MemRead: 1
+MemWrite: 0
+RegWrite: 1
+MemToReg: 1
+------------------------------------------------------
+EX_Mem Write:
+Calculation Instruction Information:
+ALUResult: 104
+SWValue: 10A
+WriteRegNum: 10
+
+Control Information:
+MemRead: 1
+MemWrite: 0
+RegWrite: 1
+MemToReg: 1
+------------------------------------------------------
+EX_Mem Read:
+Calculation Instruction Information:
+ALUResult: 108
+SWValue: 0
+WriteRegNum: 0
+
+Control Information:
+MemRead: 0
+MemWrite: 1
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+Mem_WB Write:
+Calculation Instruction Information:
+ALUResult: 0
+LWDataValue: 0
+WriteRegNum: 0
+
+Control Information:
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+Mem_WB Read:
+Calculation Instruction Information:
+ALUResult: 0
+LWDataValue: 0
+WriteRegNum: 0
+
+Control Information:
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+32
+
+
+Current Print out for Clock Cycle: 5
+
+Current Register Values:
+Register: 0 Value: 0x0
+Register: 1 Value: 0x101
+Register: 2 Value: 0x102
+Register: 3 Value: 0x103
+Register: 4 Value: 0x104
+Register: 5 Value: 0x105
+Register: 6 Value: 0x106
+Register: 7 Value: 0x107
+Register: 8 Value: 0x108
+Register: 9 Value: 0x109
+Register: A Value: 0x10A
+Register: B Value: 0x10B
+Register: C Value: 0x10C
+Register: D Value: 0x10D
+Register: E Value: 0x10E
+Register: F Value: 0x10F
+Register: 10 Value: 0x110
+Register: 11 Value: 0x111
+Register: 12 Value: 0x112
+Register: 13 Value: 0x113
+Register: 14 Value: 0x114
+Register: 15 Value: 0x115
+Register: 16 Value: 0x116
+Register: 17 Value: 0x117
+Register: 18 Value: 0x118
+Register: 19 Value: 0x119
+Register: 1A Value: 0x11A
+Register: 1B Value: 0x11B
+Register: 1C Value: 0x11C
+Register: 1D Value: 0x11D
+Register: 1E Value: 0x11E
+Register: 1F Value: 0x11F
+------------------------------------------------------
+IF_ID Write:
+Instruction: 0x01224820
+------------------------------------------------------
+IF_ID Read:
+Instruction: 0x01263820
+------------------------------------------------------
+ID_EX Write:
+Instruction Information:
+Read Register 1: 109
+Read Register 2: 106
+Offset: 0x3820
+Write Register Bits 20-16: 6
+Write Register Bits 15-11: 7
+Opcode: 0
+Function: 20
+
+Control Information:
+RegDest: 1
+ALUOp: 1
+ALUSrc: 0
+MemRead: 0
+MemWrite: 0
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+ID_EX Read:
+Instruction Information:
+Read Register 1: 104
+Read Register 2: 103
+Offset: 0x1820
+Write Register Bits 20-16: 3
+Write Register Bits 15-11: 3
+Opcode: 0
+Function: 20
+
+Control Information:
+RegDest: 1
+ALUOp: 1
+ALUSrc: 0
+MemRead: 0
+MemWrite: 0
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+EX_Mem Write:
+Calculation Instruction Information:
+ALUResult: 207
+SWValue: 103
+WriteRegNum: 3
+
+Control Information:
+MemRead: 0
+MemWrite: 0
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+EX_Mem Read:
+Calculation Instruction Information:
+ALUResult: 104
+SWValue: 10A
+WriteRegNum: 10
+
+Control Information:
+MemRead: 1
+MemWrite: 0
+RegWrite: 1
+MemToReg: 1
+------------------------------------------------------
+Mem_WB Write:
+Calculation Instruction Information:
+ALUResult: 104
+LWDataValue: 4
+WriteRegNum: 10
+
+Control Information:
+RegWrite: 1
+MemToReg: 1
+------------------------------------------------------
+Mem_WB Read:
+Calculation Instruction Information:
+ALUResult: 0
+LWDataValue: 0
+WriteRegNum: 0
+
+Control Information:
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+32
+
+
+Current Print out for Clock Cycle: 6
+
+Current Register Values:
+Register: 0 Value: 0x0
+Register: 1 Value: 0x101
+Register: 2 Value: 0x102
+Register: 3 Value: 0x103
+Register: 4 Value: 0x104
+Register: 5 Value: 0x105
+Register: 6 Value: 0x106
+Register: 7 Value: 0x107
+Register: 8 Value: 0x108
+Register: 9 Value: 0x109
+Register: A Value: 0x4
+Register: B Value: 0x10B
+Register: C Value: 0x10C
+Register: D Value: 0x10D
+Register: E Value: 0x10E
+Register: F Value: 0x10F
+Register: 10 Value: 0x110
+Register: 11 Value: 0x111
+Register: 12 Value: 0x112
+Register: 13 Value: 0x113
+Register: 14 Value: 0x114
+Register: 15 Value: 0x115
+Register: 16 Value: 0x116
+Register: 17 Value: 0x117
+Register: 18 Value: 0x118
+Register: 19 Value: 0x119
+Register: 1A Value: 0x11A
+Register: 1B Value: 0x11B
+Register: 1C Value: 0x11C
+Register: 1D Value: 0x11D
+Register: 1E Value: 0x11E
+Register: 1F Value: 0x11F
+------------------------------------------------------
+IF_ID Write:
+Instruction: 0x81180000
+------------------------------------------------------
+IF_ID Read:
+Instruction: 0x01224820
+------------------------------------------------------
+ID_EX Write:
+Instruction Information:
+Read Register 1: 109
+Read Register 2: 102
+Offset: 0x4820
+Write Register Bits 20-16: 2
+Write Register Bits 15-11: 9
+Opcode: 0
+Function: 20
+
+Control Information:
+RegDest: 1
+ALUOp: 1
+ALUSrc: 0
+MemRead: 0
+MemWrite: 0
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+ID_EX Read:
+Instruction Information:
+Read Register 1: 109
+Read Register 2: 106
+Offset: 0x3820
+Write Register Bits 20-16: 6
+Write Register Bits 15-11: 7
+Opcode: 0
+Function: 20
+
+Control Information:
+RegDest: 1
+ALUOp: 1
+ALUSrc: 0
+MemRead: 0
+MemWrite: 0
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+EX_Mem Write:
+Calculation Instruction Information:
+ALUResult: 20F
+SWValue: 106
+WriteRegNum: 7
+
+Control Information:
+MemRead: 0
+MemWrite: 0
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+EX_Mem Read:
+Calculation Instruction Information:
+ALUResult: 207
+SWValue: 103
+WriteRegNum: 3
+
+Control Information:
+MemRead: 0
+MemWrite: 0
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+Mem_WB Write:
+Calculation Instruction Information:
+ALUResult: 207
+LWDataValue: 0
+WriteRegNum: 3
+
+Control Information:
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+Mem_WB Read:
+Calculation Instruction Information:
+ALUResult: 104
+LWDataValue: 4
+WriteRegNum: 10
+
+Control Information:
+RegWrite: 1
+MemToReg: 1
+------------------------------------------------------
+0
+
+
+Current Print out for Clock Cycle: 7
+
+Current Register Values:
+Register: 0 Value: 0x0
+Register: 1 Value: 0x101
+Register: 2 Value: 0x102
+Register: 3 Value: 0x0
+Register: 4 Value: 0x104
+Register: 5 Value: 0x105
+Register: 6 Value: 0x106
+Register: 7 Value: 0x107
+Register: 8 Value: 0x108
+Register: 9 Value: 0x109
+Register: A Value: 0x4
+Register: B Value: 0x10B
+Register: C Value: 0x10C
+Register: D Value: 0x10D
+Register: E Value: 0x10E
+Register: F Value: 0x10F
+Register: 10 Value: 0x110
+Register: 11 Value: 0x111
+Register: 12 Value: 0x112
+Register: 13 Value: 0x113
+Register: 14 Value: 0x114
+Register: 15 Value: 0x115
+Register: 16 Value: 0x116
+Register: 17 Value: 0x117
+Register: 18 Value: 0x118
+Register: 19 Value: 0x119
+Register: 1A Value: 0x11A
+Register: 1B Value: 0x11B
+Register: 1C Value: 0x11C
+Register: 1D Value: 0x11D
+Register: 1E Value: 0x11E
+Register: 1F Value: 0x11F
+------------------------------------------------------
+IF_ID Write:
+Instruction: 0x81510010
+------------------------------------------------------
+IF_ID Read:
+Instruction: 0x81180000
+------------------------------------------------------
+ID_EX Write:
+Instruction Information:
+Read Register 1: 108
+Read Register 2: 118
+Offset: 0x0
+Write Register Bits 20-16: 24
+Write Register Bits 15-11: 0
+Opcode: 32
+Function: 0
+
+Control Information:
+RegDest: 0
+ALUOp: 0
+ALUSrc: 1
+MemRead: 1
+MemWrite: 0
+RegWrite: 1
+MemToReg: 1
+------------------------------------------------------
+ID_EX Read:
+Instruction Information:
+Read Register 1: 109
+Read Register 2: 102
+Offset: 0x4820
+Write Register Bits 20-16: 2
+Write Register Bits 15-11: 9
+Opcode: 0
+Function: 20
+
+Control Information:
+RegDest: 1
+ALUOp: 1
+ALUSrc: 0
+MemRead: 0
+MemWrite: 0
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+EX_Mem Write:
+Calculation Instruction Information:
+ALUResult: 20B
+SWValue: 102
+WriteRegNum: 9
+
+Control Information:
+MemRead: 0
+MemWrite: 0
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+EX_Mem Read:
+Calculation Instruction Information:
+ALUResult: 20F
+SWValue: 106
+WriteRegNum: 7
+
+Control Information:
+MemRead: 0
+MemWrite: 0
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+Mem_WB Write:
+Calculation Instruction Information:
+ALUResult: 20F
+LWDataValue: 0
+WriteRegNum: 7
+
+Control Information:
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+Mem_WB Read:
+Calculation Instruction Information:
+ALUResult: 207
+LWDataValue: 0
+WriteRegNum: 3
+
+Control Information:
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+16
+
+
+Current Print out for Clock Cycle: 8
+
+Current Register Values:
+Register: 0 Value: 0x0
+Register: 1 Value: 0x101
+Register: 2 Value: 0x102
+Register: 3 Value: 0x0
+Register: 4 Value: 0x104
+Register: 5 Value: 0x105
+Register: 6 Value: 0x106
+Register: 7 Value: 0x0
+Register: 8 Value: 0x108
+Register: 9 Value: 0x109
+Register: A Value: 0x4
+Register: B Value: 0x10B
+Register: C Value: 0x10C
+Register: D Value: 0x10D
+Register: E Value: 0x10E
+Register: F Value: 0x10F
+Register: 10 Value: 0x110
+Register: 11 Value: 0x111
+Register: 12 Value: 0x112
+Register: 13 Value: 0x113
+Register: 14 Value: 0x114
+Register: 15 Value: 0x115
+Register: 16 Value: 0x116
+Register: 17 Value: 0x117
+Register: 18 Value: 0x118
+Register: 19 Value: 0x119
+Register: 1A Value: 0x11A
+Register: 1B Value: 0x11B
+Register: 1C Value: 0x11C
+Register: 1D Value: 0x11D
+Register: 1E Value: 0x11E
+Register: 1F Value: 0x11F
+------------------------------------------------------
+IF_ID Write:
+Instruction: 0x00624022
+------------------------------------------------------
+IF_ID Read:
+Instruction: 0x81510010
+------------------------------------------------------
+ID_EX Write:
+Instruction Information:
+Read Register 1: 4
+Read Register 2: 111
+Offset: 0x10
+Write Register Bits 20-16: 17
+Write Register Bits 15-11: 0
+Opcode: 32
+Function: 10
+
+Control Information:
+RegDest: 0
+ALUOp: 0
+ALUSrc: 1
+MemRead: 1
+MemWrite: 0
+RegWrite: 1
+MemToReg: 1
+------------------------------------------------------
+ID_EX Read:
+Instruction Information:
+Read Register 1: 108
+Read Register 2: 118
+Offset: 0x0
+Write Register Bits 20-16: 24
+Write Register Bits 15-11: 0
+Opcode: 32
+Function: 0
+
+Control Information:
+RegDest: 0
+ALUOp: 0
+ALUSrc: 1
+MemRead: 1
+MemWrite: 0
+RegWrite: 1
+MemToReg: 1
+------------------------------------------------------
+EX_Mem Write:
+Calculation Instruction Information:
+ALUResult: 108
+SWValue: 118
+WriteRegNum: 24
+
+Control Information:
+MemRead: 1
+MemWrite: 0
+RegWrite: 1
+MemToReg: 1
+------------------------------------------------------
+EX_Mem Read:
+Calculation Instruction Information:
+ALUResult: 20B
+SWValue: 102
+WriteRegNum: 9
+
+Control Information:
+MemRead: 0
+MemWrite: 0
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+Mem_WB Write:
+Calculation Instruction Information:
+ALUResult: 20B
+LWDataValue: 0
+WriteRegNum: 9
+
+Control Information:
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+Mem_WB Read:
+Calculation Instruction Information:
+ALUResult: 20F
+LWDataValue: 0
+WriteRegNum: 7
+
+Control Information:
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+34
+
+
+Current Print out for Clock Cycle: 9
+
+Current Register Values:
+Register: 0 Value: 0x0
+Register: 1 Value: 0x101
+Register: 2 Value: 0x102
+Register: 3 Value: 0x0
+Register: 4 Value: 0x104
+Register: 5 Value: 0x105
+Register: 6 Value: 0x106
+Register: 7 Value: 0x0
+Register: 8 Value: 0x108
+Register: 9 Value: 0x0
+Register: A Value: 0x4
+Register: B Value: 0x10B
+Register: C Value: 0x10C
+Register: D Value: 0x10D
+Register: E Value: 0x10E
+Register: F Value: 0x10F
+Register: 10 Value: 0x110
+Register: 11 Value: 0x111
+Register: 12 Value: 0x112
+Register: 13 Value: 0x113
+Register: 14 Value: 0x114
+Register: 15 Value: 0x115
+Register: 16 Value: 0x116
+Register: 17 Value: 0x117
+Register: 18 Value: 0x118
+Register: 19 Value: 0x119
+Register: 1A Value: 0x11A
+Register: 1B Value: 0x11B
+Register: 1C Value: 0x11C
+Register: 1D Value: 0x11D
+Register: 1E Value: 0x11E
+Register: 1F Value: 0x11F
+------------------------------------------------------
+IF_ID Write:
+Instruction: 0x00000000
+------------------------------------------------------
+IF_ID Read:
+Instruction: 0x00624022
+------------------------------------------------------
+ID_EX Write:
+Instruction Information:
+Read Register 1: 0
+Read Register 2: 102
+Offset: 0x4022
+Write Register Bits 20-16: 2
+Write Register Bits 15-11: 8
+Opcode: 0
+Function: 22
+
+Control Information:
+RegDest: 1
+ALUOp: 1
+ALUSrc: 0
+MemRead: 0
+MemWrite: 0
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+ID_EX Read:
+Instruction Information:
+Read Register 1: 4
+Read Register 2: 111
+Offset: 0x10
+Write Register Bits 20-16: 17
+Write Register Bits 15-11: 0
+Opcode: 32
+Function: 10
+
+Control Information:
+RegDest: 0
+ALUOp: 0
+ALUSrc: 1
+MemRead: 1
+MemWrite: 0
+RegWrite: 1
+MemToReg: 1
+------------------------------------------------------
+EX_Mem Write:
+Calculation Instruction Information:
+ALUResult: 14
+SWValue: 111
+WriteRegNum: 17
+
+Control Information:
+MemRead: 1
+MemWrite: 0
+RegWrite: 1
+MemToReg: 1
+------------------------------------------------------
+EX_Mem Read:
+Calculation Instruction Information:
+ALUResult: 108
+SWValue: 118
+WriteRegNum: 24
+
+Control Information:
+MemRead: 1
+MemWrite: 0
+RegWrite: 1
+MemToReg: 1
+------------------------------------------------------
+Mem_WB Write:
+Calculation Instruction Information:
+ALUResult: 108
+LWDataValue: 0
+WriteRegNum: 24
+
+Control Information:
+RegWrite: 1
+MemToReg: 1
+------------------------------------------------------
+Mem_WB Read:
+Calculation Instruction Information:
+ALUResult: 20B
+LWDataValue: 0
+WriteRegNum: 9
+
+Control Information:
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+
+
+Current Print out for Clock Cycle: 10
+
+Current Register Values:
+Register: 0 Value: 0x0
+Register: 1 Value: 0x101
+Register: 2 Value: 0x102
+Register: 3 Value: 0x0
+Register: 4 Value: 0x104
+Register: 5 Value: 0x105
+Register: 6 Value: 0x106
+Register: 7 Value: 0x0
+Register: 8 Value: 0x108
+Register: 9 Value: 0x0
+Register: A Value: 0x4
+Register: B Value: 0x10B
+Register: C Value: 0x10C
+Register: D Value: 0x10D
+Register: E Value: 0x10E
+Register: F Value: 0x10F
+Register: 10 Value: 0x110
+Register: 11 Value: 0x111
+Register: 12 Value: 0x112
+Register: 13 Value: 0x113
+Register: 14 Value: 0x114
+Register: 15 Value: 0x115
+Register: 16 Value: 0x116
+Register: 17 Value: 0x117
+Register: 18 Value: 0x0
+Register: 19 Value: 0x119
+Register: 1A Value: 0x11A
+Register: 1B Value: 0x11B
+Register: 1C Value: 0x11C
+Register: 1D Value: 0x11D
+Register: 1E Value: 0x11E
+Register: 1F Value: 0x11F
+------------------------------------------------------
+IF_ID Write:
+Instruction: 0x00000000
+------------------------------------------------------
+IF_ID Read:
+Instruction: 0x00000000
+------------------------------------------------------
+ID_EX Write:
+Instruction Information:
+Read Register 1: 0
+Read Register 2: 0
+Offset: 0x0
+Write Register Bits 20-16: 0
+Write Register Bits 15-11: 0
+Opcode: 0
+Function: 22
+
+Control Information:
+RegDest: 0
+ALUOp: 0
+ALUSrc: 0
+MemRead: 0
+MemWrite: 0
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+ID_EX Read:
+Instruction Information:
+Read Register 1: 0
+Read Register 2: 102
+Offset: 0x4022
+Write Register Bits 20-16: 2
+Write Register Bits 15-11: 8
+Opcode: 0
+Function: 22
+
+Control Information:
+RegDest: 1
+ALUOp: 1
+ALUSrc: 0
+MemRead: 0
+MemWrite: 0
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+EX_Mem Write:
+Calculation Instruction Information:
+ALUResult: FFFFFEFE
+SWValue: 102
+WriteRegNum: 8
+
+Control Information:
+MemRead: 0
+MemWrite: 0
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+EX_Mem Read:
+Calculation Instruction Information:
+ALUResult: 14
+SWValue: 111
+WriteRegNum: 17
+
+Control Information:
+MemRead: 1
+MemWrite: 0
+RegWrite: 1
+MemToReg: 1
+------------------------------------------------------
+Mem_WB Write:
+Calculation Instruction Information:
+ALUResult: 14
+LWDataValue: 14
+WriteRegNum: 17
+
+Control Information:
+RegWrite: 1
+MemToReg: 1
+------------------------------------------------------
+Mem_WB Read:
+Calculation Instruction Information:
+ALUResult: 108
+LWDataValue: 0
+WriteRegNum: 24
+
+Control Information:
+RegWrite: 1
+MemToReg: 1
+------------------------------------------------------
+
+
+Current Print out for Clock Cycle: 11
+
+Current Register Values:
+Register: 0 Value: 0x0
+Register: 1 Value: 0x101
+Register: 2 Value: 0x102
+Register: 3 Value: 0x0
+Register: 4 Value: 0x104
+Register: 5 Value: 0x105
+Register: 6 Value: 0x106
+Register: 7 Value: 0x0
+Register: 8 Value: 0x108
+Register: 9 Value: 0x0
+Register: A Value: 0x4
+Register: B Value: 0x10B
+Register: C Value: 0x10C
+Register: D Value: 0x10D
+Register: E Value: 0x10E
+Register: F Value: 0x10F
+Register: 10 Value: 0x110
+Register: 11 Value: 0x14
+Register: 12 Value: 0x112
+Register: 13 Value: 0x113
+Register: 14 Value: 0x114
+Register: 15 Value: 0x115
+Register: 16 Value: 0x116
+Register: 17 Value: 0x117
+Register: 18 Value: 0x0
+Register: 19 Value: 0x119
+Register: 1A Value: 0x11A
+Register: 1B Value: 0x11B
+Register: 1C Value: 0x11C
+Register: 1D Value: 0x11D
+Register: 1E Value: 0x11E
+Register: 1F Value: 0x11F
+------------------------------------------------------
+IF_ID Write:
+Instruction: 0x00000000
+------------------------------------------------------
+IF_ID Read:
+Instruction: 0x00000000
+------------------------------------------------------
+ID_EX Write:
+Instruction Information:
+Read Register 1: 0
+Read Register 2: 0
+Offset: 0x0
+Write Register Bits 20-16: 0
+Write Register Bits 15-11: 0
+Opcode: 0
+Function: 22
+
+Control Information:
+RegDest: 0
+ALUOp: 0
+ALUSrc: 0
+MemRead: 0
+MemWrite: 0
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+ID_EX Read:
+Instruction Information:
+Read Register 1: 0
+Read Register 2: 0
+Offset: 0x0
+Write Register Bits 20-16: 0
+Write Register Bits 15-11: 0
+Opcode: 0
+Function: 22
+
+Control Information:
+RegDest: 0
+ALUOp: 0
+ALUSrc: 0
+MemRead: 0
+MemWrite: 0
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+EX_Mem Write:
+Calculation Instruction Information:
+ALUResult: 0
+SWValue: 0
+WriteRegNum: 0
+
+Control Information:
+MemRead: 0
+MemWrite: 0
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+EX_Mem Read:
+Calculation Instruction Information:
+ALUResult: FFFFFEFE
+SWValue: 102
+WriteRegNum: 8
+
+Control Information:
+MemRead: 0
+MemWrite: 0
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+Mem_WB Write:
+Calculation Instruction Information:
+ALUResult: FFFFFEFE
+LWDataValue: 0
+WriteRegNum: 8
+
+Control Information:
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+Mem_WB Read:
+Calculation Instruction Information:
+ALUResult: 14
+LWDataValue: 14
+WriteRegNum: 17
+
+Control Information:
+RegWrite: 1
+MemToReg: 1
+------------------------------------------------------
+
+
+Current Print out for Clock Cycle: 12
+
+Current Register Values:
+Register: 0 Value: 0x0
+Register: 1 Value: 0x101
+Register: 2 Value: 0x102
+Register: 3 Value: 0x0
+Register: 4 Value: 0x104
+Register: 5 Value: 0x105
+Register: 6 Value: 0x106
+Register: 7 Value: 0x0
+Register: 8 Value: 0x0
+Register: 9 Value: 0x0
+Register: A Value: 0x4
+Register: B Value: 0x10B
+Register: C Value: 0x10C
+Register: D Value: 0x10D
+Register: E Value: 0x10E
+Register: F Value: 0x10F
+Register: 10 Value: 0x110
+Register: 11 Value: 0x14
+Register: 12 Value: 0x112
+Register: 13 Value: 0x113
+Register: 14 Value: 0x114
+Register: 15 Value: 0x115
+Register: 16 Value: 0x116
+Register: 17 Value: 0x117
+Register: 18 Value: 0x0
+Register: 19 Value: 0x119
+Register: 1A Value: 0x11A
+Register: 1B Value: 0x11B
+Register: 1C Value: 0x11C
+Register: 1D Value: 0x11D
+Register: 1E Value: 0x11E
+Register: 1F Value: 0x11F
+------------------------------------------------------
+IF_ID Write:
+Instruction: 0x00000000
+------------------------------------------------------
+IF_ID Read:
+Instruction: 0x00000000
+------------------------------------------------------
+ID_EX Write:
+Instruction Information:
+Read Register 1: 0
+Read Register 2: 0
+Offset: 0x0
+Write Register Bits 20-16: 0
+Write Register Bits 15-11: 0
+Opcode: 0
+Function: 22
+
+Control Information:
+RegDest: 0
+ALUOp: 0
+ALUSrc: 0
+MemRead: 0
+MemWrite: 0
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+ID_EX Read:
+Instruction Information:
+Read Register 1: 0
+Read Register 2: 0
+Offset: 0x0
+Write Register Bits 20-16: 0
+Write Register Bits 15-11: 0
+Opcode: 0
+Function: 22
+
+Control Information:
+RegDest: 0
+ALUOp: 0
+ALUSrc: 0
+MemRead: 0
+MemWrite: 0
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+EX_Mem Write:
+Calculation Instruction Information:
+ALUResult: 0
+SWValue: 0
+WriteRegNum: 0
+
+Control Information:
+MemRead: 0
+MemWrite: 0
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+EX_Mem Read:
+Calculation Instruction Information:
+ALUResult: 0
+SWValue: 0
+WriteRegNum: 0
+
+Control Information:
+MemRead: 0
+MemWrite: 0
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+Mem_WB Write:
+Calculation Instruction Information:
+ALUResult: 0
+LWDataValue: 0
+WriteRegNum: 0
+
+Control Information:
+RegWrite: 0
+MemToReg: 0
+------------------------------------------------------
+Mem_WB Read:
+Calculation Instruction Information:
+ALUResult: FFFFFEFE
+LWDataValue: 0
+WriteRegNum: 8
+
+Control Information:
+RegWrite: 1
+MemToReg: 0
+------------------------------------------------------
+
+Process finished with exit code 0
