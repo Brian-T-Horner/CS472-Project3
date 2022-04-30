@@ -23,6 +23,8 @@ void runSimulation(const int64_t *, int);
 
 int main() {
     const int instructionCacheSize = 12;
+    int64_t testInstructionCache[5] = {0x00a63820, 0x8d0f0004, 0xad09fffc,
+                                       0x00625022, 0x10c8fffb};
     int64_t instructionCache[instructionCacheSize] = {0xa1020000, 0x810AFFFC,
                                                       0x00831820,0x01263820,
                                                       0x01224820, 0x81180000,
@@ -31,6 +33,7 @@ int main() {
                                                       0x00000000, 0x00000000};
 
 
+//    runSimulation(testInstructionCache, 5);
     runSimulation(instructionCache, instructionCacheSize);
     return 0;
 }

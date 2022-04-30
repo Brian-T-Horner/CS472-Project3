@@ -379,7 +379,7 @@ int CalcOpCode(int64_t instruction){
 int CalcOffset(int64_t instruction){
     //Calculates the offset
     unsigned int OffsetMask = 0xffff<<16;
-    int offset = (OffsetMask&(instruction<<16))>>16;
+    short offset = (OffsetMask&(instruction<<16))>>16;
     return static_cast<int>(offset);
 }
 
@@ -410,9 +410,10 @@ int CalcWriteReg_15_11(int64_t instruction){
     return reg;
 }
 
-int CalcFunction(int64_t instruction, int registers){
+int CalcFunction(int64_t instruction){
     // Calculates function code
     int mask = 0b111111;
     int func = (mask&instruction);
+    std::cout <<func<<std::endl;
     return func;
 }

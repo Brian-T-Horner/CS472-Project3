@@ -9,6 +9,7 @@
 // 4/27/2022 - Changed methods that passed pointer to ID_EX object to const
 // reference
 // 4/28/2022 - Added function code get/set methods and amended copies
+// 4/30/2022 - Fixed Opcode and function printouts
 
 // --- Standard Library Includes
 #include <iostream>
@@ -123,13 +124,13 @@ void ID_EX::setMemToReg(bool newMemToReg) {MemToReg = newMemToReg;}
 // Print Method ---
 void ID_EX::print() const {
     std::cout <<"Instruction Information:\n";
-    std::cout << "Read Register 1: 0x" <<std::uppercase<<std::hex<< ReadReg1<<std::endl;
-    std::cout << "Read Register 2: 0x" <<std::uppercase<<std::hex<<ReadReg2<<std::endl;
+    std::cout << "Read Register 1: " << ReadReg1<<std::endl;
+    std::cout << "Read Register 2: " <<ReadReg2<<std::endl;
     std::cout << "Offset: 0x" <<std::uppercase<<std::hex<<Offset<<std::endl;
     std::cout << "Write Register Bits 20-16: "<<std::dec<<WriteReg_20_16<<std::endl;
     std::cout << "Write Register Bits 15-11: " <<WriteReg_15_11 <<std::endl;
     std::cout << "Opcode: " <<OpCode <<std::endl;
-    // TODO:: FUNCTION???
+    std::cout << "Function: "<<std::uppercase<<std::hex<<Function <<std::endl;
 
     std::cout << "\nControl Information:\n";
     std::cout << "RegDest: " <<RegDest<<std::endl;

@@ -11,6 +11,7 @@
 
 // --- Standard Library Includes ---
 #include <iostream>
+#include <iomanip>
 // --- User Built Includes ----
 #include "IF_ID.h"
 
@@ -37,7 +38,10 @@ void IF_ID::setInstruction(int64_t newInstruction){instruction = newInstruction;
 
 // --- Print Method ---
 void IF_ID::print() const {
-    std::cout <<"0x"<< std::uppercase<<std::hex << instruction <<std::endl;
+    std::cout <<"Instruction: 0x"<<std::setfill('0')<<std::setw(8)<<
+    std::uppercase<<std::hex <<
+    instruction
+    <<std::endl;
 }
 
 // --- Destructor ---
